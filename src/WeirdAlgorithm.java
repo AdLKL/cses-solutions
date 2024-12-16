@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class WeirdAlgorithm {
     /**
      * Consider an algorithm that takes as input a positive integer n.
@@ -7,5 +9,14 @@ public class WeirdAlgorithm {
      * Constraints : 1 <= n <= 10^6
      */
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        while(n != 1) {
+            System.out.print(n + " ");
+            if(n %2 == 0) n /= 2;
+            else n = 3*n + 1;
+        }
+        System.out.print(n);
+
     }
 }
